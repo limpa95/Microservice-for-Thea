@@ -7,7 +7,7 @@ Clear instructions for how to programmatically REQUEST data from the microservic
   * To request data from this microservice, a program must communicate through a txt file and also connect to a specified MongoDB database where data will be stored. Recommended modules include, time, pymongo, bson.objectID, os, and dotenv.
   It is required to first write the string "standby" in a txt file named pat-microservice.txt in order for the program to loop properly. 
   The program will start implementing the request when the contents of the txt file change to anything besides "standby". For example, if a program wanted to make a request to store data on a database using this microservice, it would having to first write "standby" to pat-microservice.txt before 
-  running the microservice locally in terminal, start the microservice, then write the information it wants to store to the txt file as a dictionary so that MongoDB can process the create/insertion operation correctly. The program will then automatically provide the document id through the txt file
+  running the microservice locally in terminal, start the microservice, then write the information it wants to store to the txt file as a separate lines so that the microservice can process the create/insertion operation correctly. The program will then automatically provide the document id through the txt file
   so that the program can receive data from the MongoDB server. Finally, the program will need to again write the string "standby" to the txt file so that the microservice does not continously run.
 
 Clear instructions for how to programmatically RECEIVE data from the microservice you implemented.
