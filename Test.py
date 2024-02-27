@@ -10,10 +10,15 @@
 import time
 import pymongo
 from bson.objectid import ObjectId
+import os
+from dotenv import load_dotenv
 
 while True:
-    client = pymongo.MongoClient('mongodb+srv://limpa:3EdzbRf1XLsWBv50@microservice.yamy7n5.mongodb.net/'
-                                 '?retryWrites=true&w=majority&appName=Microservice')
+    load_dotenv()
+    my_id = os.getenv("ID")
+    my_key = os.getenv("KEY")
+    client = pymongo.MongoClient(f'mongodb+srv://{my_id}:{my_key}@microservice.yamy7n5.mongodb.net/'
+                                     '?retryWrites=true&w=majority&appName=Microservice')
 
     db = client.microservice
 

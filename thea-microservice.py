@@ -9,12 +9,17 @@
 
 import time
 import pymongo
+import os
+from dotenv import load_dotenv
 
 while True:
     read_txt = open('pat-microservice.txt', 'r+', encoding="utf-8")
     read_txt.seek(0)
     if read_txt.read() != "standby":
-        client = pymongo.MongoClient('mongodb+srv://limpa:3EdzbRf1XLsWBv50@microservice.yamy7n5.mongodb.net/'
+        load_dotenv()
+        my_id = os.getenv("ID")
+        my_key = os.getenv("KEY")
+        client = pymongo.MongoClient(f'mongodb+srv://{my_id}:{my_key}@microservice.yamy7n5.mongodb.net/'
                                      '?retryWrites=true&w=majority&appName=Microservice')
 
         db = client.microservice
