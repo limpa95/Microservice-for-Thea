@@ -18,4 +18,5 @@ Clear instructions for how to programmatically RECEIVE data from the microservic
 
 UML sequence diagram showing how requesting and receiving data works. Make it detailed enough that your partner (and your grader) will understand
 
-![Screenshot](uml-diagram.png)
+![uml-diagram](https://github.com/limpa95/Microservice-for-Thea/assets/122480059/93421c29-a34f-4b5c-92d4-2495fce5aad3)
+
