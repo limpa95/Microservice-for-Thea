@@ -8,7 +8,7 @@ Clear instructions for how to programmatically REQUEST data from the microservic
   It is required to first write the string "standby" in a txt file named pat-microservice.txt in order for the program to loop properly. 
   The program will start implementing the request when the contents of the txt file change to anything besides "standby". For example, if a program wanted to make a request to store data on a database using this microservice, it would having to first write "standby" to pat-microservice.txt before 
   running the microservice locally in terminal, start the microservice, then write the information it wants to store to the txt file as a separate lines so that the microservice can process the create/insertion operation correctly. The program will then automatically provide the document id through the txt file
-  so that the program can receive data from the MongoDB server. Finally, the program will need to again write the string "standby" to the txt file so that the microservice does not continously run.
+  so that the program can receive data from the MongoDB server. Finally, the program will need to again write the string "standby" to the txt file so that the microservice does not continuously run.
 
 Clear instructions for how to programmatically RECEIVE data from the microservice you implemented.
 
