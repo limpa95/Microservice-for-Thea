@@ -36,10 +36,14 @@ while True:
 
         name = lines[0]
         id = lines[1]
+        dob = lines[2]
+        email = lines[3]
 
         new_account = {
             "name": name,
             "account_id": id,
+            "dob": dob,
+            "email": email
         }
 
         result = accounts_collection.insert_one(new_account)

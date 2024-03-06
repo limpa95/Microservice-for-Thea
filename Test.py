@@ -32,7 +32,9 @@ while True:
 
     name_prompt = input('Please enter your name:')
     id_prompt = input('Please enter your id number:')
-    line_list = [name_prompt + "\n", id_prompt + "\n"]
+    dob_prompt = input('Please enter your date of birth:')
+    email_prompt = input('Please enter your email address:')
+    line_list = [name_prompt + "\n", id_prompt + "\n", dob_prompt + "\n", email_prompt + "\n"]
 
     read_txt = open('pat-microservice.txt', 'r+', encoding="utf-8")
     read_txt.seek(0)
